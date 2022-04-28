@@ -27,6 +27,10 @@
             <result>/WEB-INF/Pages/News.jsp</result>
         </action>
 
+        <action name="Gallery" class="project.example.Gallery">
+            <result>/WEB-INF/Pages/Gallery.jsp</result>
+        </action>
+
     </package>
 
     <!-- Add addition packages and configuration here. -->

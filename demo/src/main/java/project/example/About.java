@@ -3,43 +3,27 @@ package project.example;
 public class About extends ExampleSupport {
     public String execute() {
 
-        setName("John Doe");
+        String[] sentences = {
+            "This is sample 1.",
+            "This is sample 2.",
+            "This is sample 3.",
+            "This is sample 4.",
+            "This is sample 5."
+        };
+        int randomNum = (int) (Math.random() * 5 + 0);
 
-        setIntroductionMessage(introduction());
+        setSentence(sentences[randomNum]);
+
         return SUCCESS;
     }
 
-    private String websiteDescr = "Sample Website Description";
-    private String name;
-    private String introductionMessage;
+    private String sentence;
 
-    public String introduction() {
-        return "Hello my name is " + this.name;
+    public String getSentence() {
+        return sentence;
     }
 
-    public String getWebsiteDescr() {
-        return websiteDescr;
+    public void setSentence(String sentence) {
+        this.sentence = sentence;
     }
-
-    public void setWebsiteDescr(String websiteDescr) {
-        this.websiteDescr = websiteDescr;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIntroductionMessage() {
-        return introductionMessage;
-    }
-
-    public void setIntroductionMessage(String introductionMessage) {
-        this.introductionMessage = introductionMessage;
-    }
-
-    
 }
