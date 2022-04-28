@@ -19,6 +19,14 @@
             </result>
         </action>
 
+        <action name="About" class="project.example.About">
+            <result>/WEB-INF/Pages/About.jsp</result>
+        </action>
+
+        <action name="News" class="project.example.News">
+            <result>/WEB-INF/Pages/News.jsp</result>
+        </action>
+
     </package>
 
     <!-- Add addition packages and configuration here. -->

@@ -1,0 +1,25 @@
+review
+starts in struts -> look for root -> go to action -> give result (usually the .jsp)
+
+Index, About, 3rd Page
+Put Content
+---
+Webapp folder contains UI (jsps and html), java folder contains action classes (whatever classes are going to process requests e.g About.java) - controller
+resources folder contains roots of struts project
+---
+User wants to access -> index.jsp (java servlet pages, which is templating) which displays data from action files
+User wants to access another page -> it goes to struts -> looks for the action -> give a result (.jsp) -> display the UI
+---
+Activity 
+Currently we have index.jsp and struts. And we made About.java and About.jsp
+Create an Action and a JSP.
+Put content in all 3.
+
+To make the new page:
+add a new action in struts
+create the jsp and java files
+---
+
+Action file for About.jsp is About.java
+About.jsp can access attributes in About.java
+<s:property> tag access properties from the java associated with the jsp

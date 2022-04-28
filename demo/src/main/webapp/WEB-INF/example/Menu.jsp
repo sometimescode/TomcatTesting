@@ -1,3 +1,17 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<s:include value="Missing.jsp"/>
+<style> 
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+</style>
+<nav>
+    <ul>
+        <li>Men 1</li>
+        <li>Men 2</li>
+        <li>Men 3</li>
+    </ul>
+</nav>

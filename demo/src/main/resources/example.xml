@@ -10,14 +10,10 @@
     <package name="example" namespace="/example" extends="struts-default">
 
         <default-action-ref name="HelloWorld" />
-
-        <action name="About" class="project.example.About">
-            <result>/WEB-INF/example/About.jsp</result>
-        </action>
         
-        <!-- <action name="HelloWorld" class="project.example.HelloWorld">
+        <action name="HelloWorld" class="project.example.HelloWorld">
             <result>/WEB-INF/example/HelloWorld.jsp</result>
-        </action> -->
+        </action>
 
         <action name="Login_*" method="{1}" class="project.example.Login">
             <result name="input">/WEB-INF/example/Login.jsp</result>

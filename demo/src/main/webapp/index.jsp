@@ -1,9 +1,18 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+
     <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+
       .center {
         text-align: center;
       }
@@ -37,6 +46,10 @@
         background-color: #111;
       }
 
+      a.active {
+        background-color: #EE6C4D;
+      }
+
       .column {
         float: left;
         width: 33.33%;
@@ -68,10 +81,14 @@
   <body>
     <ul id="navigation">
       <li>
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="">Home</a>
       </li>
       <li>
-        <s:url var="aboutPage" action="example/About" />
+        <s:url var="newsPage" action="News" />
+        <s:a href="%{newsPage}">News</s:a>
+      </li>
+      <li>
+        <s:url var="aboutPage" action="About" />
         <s:a href="%{aboutPage}">About</s:a>
       </li>
     </ul>
