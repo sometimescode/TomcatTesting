@@ -21,6 +21,8 @@
 
         <action name="About" class="project.example.About">
             <result>/WEB-INF/Pages/About.jsp</result>
+            <result name="regular">/WEB-INF/Pages/Regular.jsp</result>
+            <result name="admin">/WEB-INF/Pages/Admin.jsp</result>
         </action>
 
         <action name="News" class="project.example.News">

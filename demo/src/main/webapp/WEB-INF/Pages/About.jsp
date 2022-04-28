@@ -45,6 +45,11 @@
     <s:include value="Menu.jsp" />
 
     <main>
+      <s:form action="About" namespace="/Pages">
+        <s:textfield key="username"/>
+        <s:submit key="submit"/>
+      </s:form>
+      <h1><s:property value="username"/></h1>
       <header class="center">
         <h2>Who is John Doe?</h2>
       </header>

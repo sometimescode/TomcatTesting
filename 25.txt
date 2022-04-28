@@ -1,0 +1,49 @@
+git clone http link of repository
+
+mvc -> model, view, controller
+
+model -> users
+
+controller -> processes requests and sends response
+and talks with model and view
+
+login scenario -> controller processes and then calls model to look for
+user and password
+
+IMPORTANT:
+New Project Generation today:
+1) Installed Tomcat for Java
+2) Installed apache-tomcat
+1) mvn archetype:generate
+>struts2
+>8
+>48
+groupid: project
+artfactid: demo
+v1 snapshop: enter
+v2project: enter
+yes: enter
+4) Open MAVEN
+.war is used for java projects that contain web files, to use it, put this in pom.xml
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+Update pom.xml
+>clean
+>compile
+>package
+it will generate a .war
+5) right click tomcat open in browser
+follow a link from the cmd
+look for something Deployment of web application directory and copy that
+go to snapshot (.war file)> run on tomcat server /////// copy war file in the webapps folder then
+right click and restart and snapshot should be under the tomcat in tomcat servers
+>right click snapshot and open in browser 
+Loading... > Struts is up and running
+
+[How to OPEN UP port 8080]
+cmd command: netstat -ano | findstr 8080 then TASKKILL /F /PID 9104 <-- replace numbers with the thing you found in netstat containing 8080
+bash command: netstat -vanp tcp | grep 3000
+sudo lsof -i :3000?

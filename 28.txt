@@ -1,0 +1,27 @@
+About.jsp
+Struts -> action -> data from the action (.java) is passed as result -> displayed in .jsp
+Struts 2 -> each action should have an execute function. And it will always return a String because that's what's checked in
+results tag.
+---
+Login Scenario
+Index -> Struts -> Login.java -> Login.jsp -> request -> struts > Login.java can return values on execute() ->
+from struts, it will run the appropriate .jsp based on result name
+ex. Login.java's execute returns "regular", in struts, under Login action,
+<result name="regular"></result> gets chosen
+---
+Activity have an array of 5 sentences "This is sample [x]" where x is 1 to 5.
+Load page depending on result of random;
+in this case you have max and min (x + y) in Math.floor(Math.random())
+---
+Forms
+s:form tag has action and namespace (optional)
+ex. <s:form action="" namespace=""></s:form>
+Use namespace where your jsp is located
+textfield tag has key and value, we'll use key today
+If form sends to .java, it will set the attribute used in key in that .java file
+---
+s:property calls getter on value
+s:textfield calls setter on key
+---
+Practice Activity
+create array of username and password and if it exists, redirect, else display an error
