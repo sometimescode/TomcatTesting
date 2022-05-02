@@ -19,12 +19,14 @@
     </style>
   </head>
   <body>
-    <s:include value="/WEB-INF/Pages/Menu.jsp" />
-    <header class="center">
-      <h2>Home Page!</h2>
-      <p>Welcome.</p>
-    </header>
+    <s:include value="/WEB-INF/Pages/Menu.jsp"/>
+
     <main>
+      <header class="center">
+        <h2>Home Page!</h2>
+        <p>Welcome.</p>
+      </header>
+      
       <div class="row center">
         <div class="column">
           <h3>Column</h3>

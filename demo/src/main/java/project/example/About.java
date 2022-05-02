@@ -14,17 +14,11 @@ public class About extends ExampleSupport {
 
         setSentence(sentences[randomNum]);
         
-        if(username.equals("regular")) {
-            return "regular";
-        }else if(username.equals("admin")) {
-            return "admin";
-        }else {
-            return SUCCESS;
-        }
+        return SUCCESS;
+
     }
 
     private String sentence;
-    private String username="";
 
     public String getSentence() {
         return sentence;
@@ -32,13 +26,5 @@ public class About extends ExampleSupport {
 
     public void setSentence(String sentence) {
         this.sentence = sentence;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }

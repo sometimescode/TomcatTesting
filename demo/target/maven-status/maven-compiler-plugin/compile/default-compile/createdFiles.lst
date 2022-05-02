@@ -1,6 +1,7 @@
 project\example\Login.class
+project\example\News.class
+project\example\LoginA.class
 project\example\ExampleSupport.class
 project\example\HelloWorld.class
-project\example\News.class
 project\example\About.class
 project\example\Gallery.class

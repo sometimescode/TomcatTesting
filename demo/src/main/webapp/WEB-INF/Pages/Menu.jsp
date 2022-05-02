@@ -78,6 +78,10 @@
           <s:url var="aboutPage" action="About" />
           <s:a href="%{aboutPage}">About</s:a>
         </li>
+        <li style="float:right">
+          <s:url var="loginPage" action="LoginA" />
+          <s:a href="%{loginPage}">Login</s:a>
+        </li>
       </ul>
 </nav>
 <footer>

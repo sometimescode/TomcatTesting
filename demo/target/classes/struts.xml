@@ -21,8 +21,6 @@
 
         <action name="About" class="project.example.About">
             <result>/WEB-INF/Pages/About.jsp</result>
-            <result name="regular">/WEB-INF/Pages/Regular.jsp</result>
-            <result name="admin">/WEB-INF/Pages/Admin.jsp</result>
         </action>
 
         <action name="News" class="project.example.News">
@@ -31,6 +29,11 @@
 
         <action name="Gallery" class="project.example.Gallery">
             <result>/WEB-INF/Pages/Gallery.jsp</result>
+        </action>
+
+        <action name="LoginA" class="project.example.LoginA">
+            <result>/WEB-INF/Pages/LoginA.jsp</result>
+            <result name="regular">index.jsp</result>
         </action>
 
     </package>
