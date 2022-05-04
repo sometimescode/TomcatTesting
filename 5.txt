@@ -1,0 +1,44 @@
+web.xml -> update <welcome-file> tag and put index.jsp so it shows up first when visiting site
+struts -> contains the actions and results for the new pages (do not have anything in example.xml)
+Menu.jsp -> contains navigation and footer html, css
+index.jsp -> Default, no java class associated
+news.jsp -> <s:property value="sentence">, random text, same logic across all other pages
+------------------------
+Create an object for each account
+Account Class
+fields: username, password, first name, last name, birthday, type (of account), bio
+-
+Create 3 objects and fill it up with information (manually)
+Then check objects to see if account matches
+and if match, check type field to see which page to redirect (result)
+possible values for type: "Regular" or "Admin"
+
+Regular Leads to Profile.jsp
+Profile.jsp displays information about the account
+Profile Picture, first name, last name, birth date (all in first), bio (2nd column)
+If admin, redirect to profile but show place at bottom
+10m per year
+1m per month
+33k per day
+
+---
+Set variable
+<s:set var="accountType" value="type"/>
+<h1><s:property value="#accountType"></h1>
+# is variable (set by the struts tag), without variable is value (accessing an attribute)
+single quotation treats whatever is inside quotation as one character
+we need to compare strings, so use double quotation marks
+<s:if test="%{#accountType == "admin"}">This is an admin</s:if>
+change above to
+<s:if test='%{#accountType == "admin"}'>This is an admin</s:if>
+so that you use double quotes, which is what you should use when comparing strings;
+--------
+Pass variables
+<s:bear var="account" name="website.example.Account"/> <- account is your Java class
+<h1><s:property value="#account.name"/></h1>
+
+
+<s:set var="activeAccountVar" value="activeAccount"/> <- activeAccount was set in your .java file
+<h1><s:property value="#activeAccountVar.name"/></h1>
+
+

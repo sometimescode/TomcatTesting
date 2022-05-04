@@ -45,15 +45,15 @@
     <s:include value="Menu.jsp" />
 
     <main>
-      <h2>Login v12 Page</h2>
+      <h2>Member Login v3</h2>
       <s:form action="LoginA" namespace="/Pages">
         <s:textfield key="username"/>
         <s:password key="password"/>
         <s:submit key="submit"/>
       </s:form>
-      <h4><s:property value="username"/></h1>
-      <h4><s:property value="password"/></h1>
-      <h4><s:property value="loginMessage"/></h1>
+      <h4><s:property value="username"/></h4>
+      <h4><s:property value="password"/></h4>
+      <h4><s:property value="loginMessage"/></h4>
     </main>
   </body>
 </html>

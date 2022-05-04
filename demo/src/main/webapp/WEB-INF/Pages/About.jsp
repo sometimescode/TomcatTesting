@@ -16,21 +16,6 @@
         clear: both;
       }
 
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 3px;
-        background-color: #333;
-        color: white;
-        text-align: right;
-      }
-
-      footer span {
-        padding-right: 16px;
-      }
-
       #aboutMeImg {
         width: 100%;
         height: auto;

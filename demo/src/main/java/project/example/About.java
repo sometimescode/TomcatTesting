@@ -13,7 +13,7 @@ public class About extends ExampleSupport {
         int randomNum = (int) (Math.random() * 5 + 0);
 
         setSentence(sentences[randomNum]);
-        
+                
         return SUCCESS;
 
     }

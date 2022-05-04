@@ -42,10 +42,6 @@
         background-color: #111;
       }
 
-      nav a.active {
-        background-color: #EE6C4D;
-      }
-
       footer {
         position: fixed;
         left: 0;
