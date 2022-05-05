@@ -34,11 +34,13 @@ change above to
 so that you use double quotes, which is what you should use when comparing strings;
 --------
 Pass variables
-<s:bear var="account" name="website.example.Account"/> <- account is your Java class
+<s:bean var="account" name="website.example.Account"/> <- account is your Java class
 <h1><s:property value="#account.name"/></h1>
 
 
 <s:set var="activeAccountVar" value="activeAccount"/> <- activeAccount was set in your .java file
 <h1><s:property value="#activeAccountVar.name"/></h1>
 
+if you don't want to set a variable, you can simply use the existing value
+<h1><s:property value="activeAccount.name"/></h1>
 

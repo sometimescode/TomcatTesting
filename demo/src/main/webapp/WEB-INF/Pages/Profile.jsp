@@ -16,13 +16,20 @@
         clear: both;
       }
 
-      #aboutMeImg {
-        width: 100%;
-        height: auto;
+      #userImage {
+        width: 100px;
+        height: 100px;
+        padding: 0px 15px;
       }
 
-      .main {
-        padding: 0px 15px;
+      #adminView {
+        background-color: #DEDEDE;
+        border-radius: 20px;
+        padding: 20px 0px;
+      }
+
+      #adminView > h2 {
+        margin-top: 0px;
       }
     </style>
   </head>
@@ -35,21 +42,20 @@
       </header>
       <div class="row">
         <div class="column">
-          <!-- <img id="aboutMeImg" src="https://toppng.com/uploads/preview/happy-person-11545688398rslqmyfw4g.png" alt="" /> -->
-          <h5>PICTURE HERE</h5>
-          <h5><s:property value="activeAccount.firstname"/> <s:property value="activeAccount.lastname"/></h5>
-          <h5><s:property value="activeAccount.birthday"/></h5>
+          <img id="userImage" src="https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_960_720.png" alt="">
+          <p><s:property value="activeAccount.firstname"/> <s:property value="activeAccount.lastname"/></p>
+          <p><s:property value="activeAccount.birthday"/></p>
         </div>
         <div class="column">
-          <h5><s:property value="activeAccount.bio"/></h5>
+          <p><s:property value="activeAccount.bio"/></p>
         </div>
       </div>
       <s:if test='%{activeAccount.type == "Admin"}'>
-      <div class="row">
-        <h5>Admin View</h5>
-        <h5>10m per year</h5>
-        <h5>1m per month</h5>
-        <h5>33k per day</h5>        
+      <div id="adminView" class="row">
+        <h2 class="center">Admin View</h2>
+        <p>10m per year</p>
+        <p>1m per month</p>
+        <p>33k per day</p>        
       </div>
       </s:if>
     </main>

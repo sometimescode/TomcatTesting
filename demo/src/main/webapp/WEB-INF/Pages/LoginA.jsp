@@ -3,49 +3,13 @@
 <html>
   <head>
     <title>Login</title>
-    <style>
-      .column {
-        float: left;
-        width: 50%;
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 3px;
-        background-color: #333;
-        color: white;
-        text-align: right;
-      }
-
-      footer span {
-        padding-right: 16px;
-      }
-
-      #aboutMeImg {
-        width: 100%;
-        height: auto;
-      }
-
-      .aboutMeText {
-        padding: 0px 15px;
-      }
-    </style>
   </head>
   <body>
     <s:include value="Menu.jsp" />
 
     <main>
-      <h2>Member Login v3</h2>
+      <div style="margin: auto; width: 50%;">
+      <h2>Member Login</h2>
       <s:form action="LoginA" namespace="/Pages">
         <s:textfield key="username"/>
         <s:password key="password"/>
@@ -54,6 +18,7 @@
       <h4><s:property value="username"/></h4>
       <h4><s:property value="password"/></h4>
       <h4><s:property value="loginMessage"/></h4>
+      </div>
     </main>
   </body>
 </html>

@@ -10,7 +10,7 @@ public class About extends ExampleSupport {
             "This is sample 4.",
             "This is sample 5."
         };
-        int randomNum = (int) (Math.random() * 5 + 0);
+        int randomNum = (int) (Math.random() * 5);
 
         setSentence(sentences[randomNum]);
                 

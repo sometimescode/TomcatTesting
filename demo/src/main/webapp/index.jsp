@@ -24,7 +24,7 @@
     <main>
       <header class="center">
         <h2>Home Page!</h2>
-        <p>Welcome.</p>
+        <p>Welcome to John Doe's Personal Site</p>
       </header>
       
       <div class="row center">

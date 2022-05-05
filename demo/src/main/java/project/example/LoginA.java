@@ -5,31 +5,34 @@ public class LoginA extends ExampleSupport {
 
         Account[] accounts = new Account[3]; 
         
-        accounts[0] = new Account("user_one", "pass1", "John", "Doe", "January 1, 2000", "Regular",
-        "John Doe is from Canada. He is studying Math Education at Utah State. He currently works as a electrician.");
+        accounts[0] = new Account("user_one", "pass1", "John", "Doe", "January 1, 2000", "Admin",
+        "John Doe is from Canada. He is studying Math Education at Utah State. He currently works as an author.");
         accounts[1] = new Account("user_two", "pass2", "Jane", "Doe", "February 1, 2000", "Regular",
         "Jane Doe is from Maine. She is studying Entrepreneurship at UVU. She currently works as a manager at a local restaurant.");
-        accounts[2] = new Account("user_three", "pass3", "Jimmy", "Doe", "March 1, 2000", "Admin", 
+        accounts[2] = new Account("user_three", "pass3", "Jimmy", "Doe", "March 1, 2000", "Regular", 
         "Jimmy Doe is from Texas. He is studying Anthropology at BYU. He currently works as a salesperson.");
 
-        if(this.username.isBlank() && this.password.isBlank()){
-            this.loginMessage = "";
-            this.username = ""; //reset in case username is just spaces
-        }else if(this.username.isBlank()) {
-            this.loginMessage = "Please enter a username";
-        }else if(this.password.isBlank()) {
-            this.loginMessage = "Please enter a password";
+        if(username.isBlank() && password.isBlank()){
+            if(!submit.isEmpty()) {
+                loginMessage = "Please enter username and password";
+            }
+
+            username = ""; //reset in case username is just spaces
+        }else if(username.isBlank()) {
+            loginMessage = "Please enter a username";
+        }else if(password.isBlank()) {
+            loginMessage = "Please enter a password";
         }else {
-            // if(checkFromMockDatabase(this.username, this.password, accounts)) {
+            // if(checkFromMockDatabase(username, password, accounts)) {
             //     return "regular";
             // }
-            int userIndex = checkMatchingAccountIndex(this.username, this.password, accounts);
+            int userIndex = checkMatchingAccountIndex(username, password, accounts);
             if(userIndex != -1) {
                 activeAccount = accounts[userIndex];
                 return activeAccount.getType();
             }
             else {
-                this.loginMessage = "Invalid username or password";
+                loginMessage = "Invalid username or password";
             } 
         }
 
@@ -40,14 +43,18 @@ public class LoginA extends ExampleSupport {
     private String password = "";
     private String loginMessage = "";
     private Account activeAccount;
+    private String submit = "";
 
     public int checkMatchingAccountIndex(String user, String pass, Account[] accounts) {
+        int matchingIndex = -1;
+
         for(int x = 0; x < accounts.length; x++) {
             if(accounts[x].accountCheck(user, pass)){
-                return x;
+                matchingIndex = x;
+                break;
             }
         }
-        return -1;
+        return matchingIndex;
     }
 
     // public boolean checkFromMockDatabase(String user, String pass) {
@@ -96,5 +103,11 @@ public class LoginA extends ExampleSupport {
         this.activeAccount = activeAccount;
     }
 
-    
+    public String getSubmit() {
+        return submit;
+    }
+
+    public void setSubmit(String submit) {
+        this.submit = submit;
+    }
 }

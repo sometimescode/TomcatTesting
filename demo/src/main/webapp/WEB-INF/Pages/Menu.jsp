@@ -2,11 +2,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
 <style> 
       body {
         font-family: 'Roboto', sans-serif;
+        background-color: #fdfdfd;
       }
 
       .center {
@@ -56,11 +57,20 @@
       footer span {
         padding-right: 16px;
       }
+
+      main {
+        margin: 30px 350px;
+      }
+
+      div p {
+        padding: 0px 15px;
+      }
 </style>
 <nav>
     <ul>
         <li>
-          <a href=".">Home</a>
+          <s:url var="homePage" value="/" />
+          <s:a href="%{homePage}">Home</s:a>
         </li>
         <li>
           <s:url var="newsPage" action="News" />
@@ -81,5 +91,5 @@
       </ul>
 </nav>
 <footer>
-  <span>2021</span>
+  <span>2022</span>
 </footer>

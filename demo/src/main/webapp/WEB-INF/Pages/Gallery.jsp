@@ -15,6 +15,15 @@
       </header>
       <div>
         <s:property value="sentence"/>
+        <ol>
+          <li><a href="#">Book A</a></li>
+          <li><a href="#">Book B</a></li>
+          <li><a href="#">Book C</a></li>
+          <li><a href="#">Book D</a></li>
+          <li><a href="#">Book E</a></li>
+          <li><a href="#">Book F</a></li>
+          <li><a href="#">Book G</a></li>
+        </ol>
       </div>
     </main>
   </body>

@@ -20,10 +20,6 @@
         width: 100%;
         height: auto;
       }
-
-      .aboutMeText {
-        padding: 0px 15px;
-      }
     </style>
   </head>
   <body>
@@ -31,14 +27,14 @@
 
     <main>
       <header class="center">
-        <h2>Who is John Doe?</h2>
+        <h2>Get to know John Doe</h2>
       </header>
       <div class="row">
         <div class="column">
-          <img id="aboutMeImg" src="https://toppng.com/uploads/preview/happy-person-11545688398rslqmyfw4g.png" alt="" />
+          <img id="aboutMeImg" src="https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_960_720.png" alt="" />
         </div>
         <div class="column">
-          <h5 class="aboutMeText"><s:property value="sentence"/></h5>
+          <p class="textPadding"><s:property value="sentence"/></p>
         </div>
       </div>
     </main>

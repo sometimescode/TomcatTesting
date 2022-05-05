@@ -1,0 +1,5 @@
+Static files (css, html, java) are meant to be hosted on Apache server, but currently being hosted in Tomcat folder.
+For now, put the css in WEB-INF folder or maybe in WEBAPP folder (root).
+
+
+got practice initialize git inside folder with src and target
